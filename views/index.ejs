@@ -1,0 +1,135 @@
+ <!-- Required meta tags -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+ <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+   <div class="carousel-indicators">
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+       aria-current="true" aria-label="Slide 1"></button>
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+   </div>
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img src="https://ewandjs.com/wp-content/uploads/billboard-repair.jpg" class="d-block w-100 h-100" alt="First slide">
+       <div class="carousel-caption d-none d-md-block">
+         <h1 style="color:#FDFEFE">WATCH WORLD</h1>
+         <h3 style="color:#FDFEFE">Time is the most valuable thing a man can spend...</h3>
+       </div>
+     </div>
+     <div class="carousel-item">
+       <img src="https://primeambassador.com/assets/images/blog/mens-luxury-watches.jpg" class="d-block w-100 h-100" alt="Second slide">
+       <div class="carousel-caption d-none d-md-block">
+         <h1 style="color:#FDFEFE">INVEST TIME</h1>
+         <h3 style="color:#FDFEFE">The key is in not spending time, but in investing it</h3>
+       </div>
+     </div>
+     <div class="carousel-item">
+       <img
+         src="https://www.spotthewatch.com/wp-content/uploads/2020/03/A-man-in-a-classic-suit-sits-on-a-black-leather-sofa.jpg"
+         class="d-block w-100 h-100" alt="Third slide">
+       <div class="carousel-caption d-none d-md-block">
+         <h1 style="color:#FDFEFE">TIME POWER</h1>
+         <h3 style="color:#FDFEFE">Lost time is never found again...</h3>
+       </div>
+     </div>
+   </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+   </button>
+ </div>
+
+
+
+
+ <style>
+   .carousel-item {
+     height: 32rem;
+     background: #777;
+     position: relative;
+     background-position: center;
+     background-size: cover;
+   }
+
+   .container {
+     /* position: absolute; */
+     bottom: 0;
+     left: 0;
+     right: 0;
+     padding: 10px;
+   }
+ </style>
+
+
+ <section class="py-5">
+   <div class="container-fluid mt-2">
+     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 ">
+       <% laptop.forEach((laptop) => { %>
+
+       <div class="col mb-5">
+         <div class="card h-100">
+           <div class="row">
+             <div class="im1 oh">
+             <a href="/store/<%= laptop.id %> "> <img class="card-img-top img-fluid izo " src="<%= laptop.img %> "
+                 alt="<%= laptop.name %> "> </a>
+                </div>
+           </div>
+           <div class="card-body p-4">
+             <div class="text-center">
+               <h5 class="fw-bolder"><a href="store/<%= laptop.id %> "><%= laptop.name %></a></h5>
+               <span class="fw-bolder">$<%= laptop.price %></span>
+
+               <p class="text-center mb-0" id="quantity">In Stock: <%= laptop.quantity %> </p>
+               <% if (laptop.quantity === 0) { %>
+               <p class="text-center mb-0" id="quantity">Out Of Stock </p>
+               <% } else { %>
+
+             </div>
+           </div>
+           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+             <div class="text-center">
+
+               <form action="/store/<%= laptop.id %>?_method=PUT " method="post">
+                 <a href="/store"><button class="btn btn-warning w-100 mb-2 " type="submit">Add To Cart</button></a>
+               </form>
+               <% } %>
+             </div>
+           </div>
+         </div>
+
+       </div>
+       <% }) %>
+     </div>
+   </div>
+ </section>
+
+
+ <!-- <style>
+   .im1 {
+     background-image:url(https://www.jared.com/productimages/processed/V-270936709_0_800.jpg?pristine=true);
+     background-repeat: no-repeat;
+     background-size: cover ;
+   }
+
+   .izo {
+     opacity: 0;
+     transition-duration: 1s;
+     transform: scale(1.25, 1.25);
+   }
+   .izo:hover {
+     opacity: 1;
+     transform: scale(1, 1);
+   }
+   .oh {
+     overflow: hidden;
+   }
+   /* img {
+    box-shadow: #777;
+   } */
+ </style> -->

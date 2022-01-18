@@ -1,0 +1,42 @@
+<h1>blank</h1>
+<div class="container">
+    <div class="row">
+
+        <h1> <%= laptopItem.name %></h1>
+        <div class="image">
+            <img class="medium-img" src="<%= laptopItem.img %>" alt="<%= laptopItem.name%>">
+        </div>
+        <p>Description: <%= laptopItem.description %> </p>
+        <h5>In Stock: <%= laptopItem.quantity %> </h6>
+        <h3>Price: $ <%= laptopItem.price %> .00</h3>
+
+        <% if (laptopItem.quantity === 0) { %>
+        <p class="text-center mb-0" id="quantity">Out Of Stock </p>
+        <% } else { %>
+
+
+    </div>
+</div>
+
+
+<div class="text-center">
+    <a href="/store/<%= laptopItem.id %>/edit" class="btn btn-warning"> Edit </a>
+</div>
+
+
+<div class="text-center">
+    <form action="/store/<%= laptopItem.id %>?_method=DELETE " method="POST">
+        <a href="/store" class="back"> <button type="submit" class="btn btn-danger">Delete</button> </a>
+    </form>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-success" href="#">Add to Cart</a>
+
+    <% } %>
+</div>
+
+
+<footer class="py-4 bg-dark">
+    <p class="m-0 text-center text-white">Copyright © 2022 Apple Inc. All rights reserved.</p>
+</footer>

@@ -1,0 +1,38 @@
+<h1>blank</h1>
+<h1>Edit item on the Laptop Store</h1>
+
+<form action="/store/<%= laptopItem.id %>?_method=PUT " method="POST">
+
+  <div class="form-group">
+    <label for="name">Item Name</label>
+    <input type="text" class="form-control" name="name" value="<%= laptopItem.name %>">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Item Description</label>
+    <input type="text" class="form-control" name="description" value="<%= laptopItem.description %>">
+  </div>
+
+  <div class="form-group">
+    <label for="img">Image Path</label>
+    <input type="text" class="form-control" name="img" value="<%= laptopItem.img %>">
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" class="form-control" name="price" value="<%= laptopItem.price %>">
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input type="number" class="form-control" name="quantity" value="<%= laptopItem.quantity %>">
+  </div>
+
+  <a href="/store" class="back"> <button type="submit" class="btn btn-success">Submit</button> </a>
+</form>
+
+
+
+<footer class="py-4 bg-dark fixed-bottom">
+  <p class="m-0 text-center text-white">Copyright © 2022 Apple Inc. All rights reserved.</p>
+</footer>
