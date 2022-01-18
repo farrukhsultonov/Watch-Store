@@ -6,20 +6,23 @@ Online Store for watch lovers, that allows user to have CRUD ability to view, ad
 
 ## Instruction
 
+#### When website is open, homepage is present
 <table>
-
-  #### When website is open, homepage is present
   <tr>
     <td> <img src="/public/image/home page.png" alt="Home Page"> </td>
   </tr>
+  </table>
   
   #### To view detailed product info, if new user register, or if existing user login.
+  <table>
   <tr>
     <td> <img src="/public/image/register.png" alt="Register Page"> </td>
     <td> <img src="/public/image/login.png" alt="Login Page"> </td>
   </tr>
+  </table>
 
  #### Once logged in, user has access to view, add, edit, delete a product.
+ <table>
   <tr>
     <td> <img src="/public/image/view.png" alt="ShowPage"> </td>
     <td> <img src="/public/image/add.png" alt="Add Page"> </td>
