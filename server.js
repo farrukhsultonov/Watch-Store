@@ -61,7 +61,7 @@ app.use('/store', storeController)
 // app.use('/store', authRequired, storeController)   
 app.use('/session', sessionsController)
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Server is running on port 3000')
 })
 
