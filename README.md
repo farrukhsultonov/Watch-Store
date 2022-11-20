@@ -3,6 +3,7 @@
 ## INTRODUCTION
 Online Store for watch lovers, that allows user to have CRUD ability to view, add, edit and delete product. Users have to create an account and sign in before being able to access all the features of the web.
 
+## Click [here](https://blingstore.herokuapp.com/store) to check it out.
 
 ## Instruction
 
